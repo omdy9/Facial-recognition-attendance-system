@@ -1,0 +1,25 @@
+<AttendanceScreen>:
+    name: "attendance"
+
+    MDLabel:
+        text: "Mark Attendance"
+        halign: "center"
+        font_style: "H4"
+        size_hint: None, None
+        pos_hint: {"center_x": 0.5, "center_y": 0.9}
+
+    MDTextField:
+        id: username
+        hint_text: "Username"
+        size_hint: None, None
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        width: "300dp"
+        height: "50dp"
+
+    MDRaisedButton:
+        text: "Mark Attendance"
+        size_hint: None, None
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        width: "200dp"
+        height: "50dp"
+        on_release: root.mark_attendance()

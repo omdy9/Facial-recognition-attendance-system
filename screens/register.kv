@@ -1,0 +1,55 @@
+<RegisterScreen>:
+    name: "register"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: [50, 50, 50, 50]
+        spacing: 20
+        size_hint_x: None
+        width: self.parent.width * 0.8 if self.parent else 400
+        pos_hint: {"center_x": 0.5}
+
+        MDTextField:
+            id: username_input
+            hint_text: "Username"
+
+        MDTextField:
+            id: password_input
+            hint_text: "Password"
+            password: True
+
+        MDTextField:
+            id: rollno_input
+            hint_text: "Roll No"
+            disabled: False
+
+        MDTextField:
+            id: division_input
+            hint_text: "Division"
+            disabled: False
+
+        MDRaisedButton:
+            id: role_button
+            text: "Select Role"
+            on_release: root.open_role_menu()
+
+        MDRaisedButton:
+            id: capture_face_button
+            text: "Capture Face from Camera"
+            on_release: root.open_camera()
+
+        BoxLayout:
+            id: camera_box
+            size_hint_y: None
+            height: 0
+
+        Image:
+            id: face_preview
+            size_hint_y: None
+            height: 50
+            allow_stretch: True
+            keep_ratio: True
+
+        MDRaisedButton:
+            text: "Register"
+            on_release: root.register_user()

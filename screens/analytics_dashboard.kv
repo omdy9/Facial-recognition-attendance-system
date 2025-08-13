@@ -1,0 +1,29 @@
+<AnalyticsDashboard>:
+    name: "analytics_dashboard"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 20
+
+        MDLabel:
+            text: "Analytics Dashboard"
+            font_style: "H4"
+            halign: "center"
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        ScrollView:
+            do_scroll_x: False
+
+            MDBoxLayout:
+                id: content_box
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 10
+
+                # Add analytics dashboard content here, e.g., charts, reports, etc.
+                MDLabel:
+                    text: "Welcome to the Analytics Dashboard"
+                    halign: "center"

@@ -1,0 +1,13 @@
+<FaceCaptureScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        CameraClick:
+            id: camera_widget
+
+        MDRaisedButton:
+            text: "Done"
+            size_hint_y: None
+            height: "50dp"
+            on_release:
+                root.on_done(self)
